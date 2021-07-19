@@ -11,22 +11,24 @@
     <title>INFORMATION THE EMPLOYEE</title>
 </head>
 <body>
-<h2>information the employee</h2>
-<table>
-    <tr>
-        <td>ID :</td>
-        <td>${id}</td>
-    </tr>
-    <tr>
-        <td>NAME :</td>
-        <td>${name}</td>
+<div align="center">
+    <h2>information the employee</h2>
+    <table>
+        <tr>
+            <td>ID :</td>
+            <td>${id}</td>
+        </tr>
+        <tr>
+            <td>NAME :</td>
+            <td>${name}</td>
 
-    </tr>
-    <tr>
-        <td>CONTACT-NUMBER :</td>
-        <td>${contactNumber}</td>
+        </tr>
+        <tr>
+            <td>CONTACT-NUMBER :</td>
+            <td>${contactNumber}</td>
 
-    </tr>
-</table>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

@@ -10,20 +10,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("employee/")
+@RequestMapping("/employee")
 public class EmployeeController {
 
-    @RequestMapping(value = "showForm", method = RequestMethod.GET)
+    //mapping(value = showForm, method = request.GET)
+    @RequestMapping(value = "/showForm", method = RequestMethod.GET)
     public String showForm(ModelMap model) {
         model.addAttribute("employee", new Employee());
         return "employee/create";
     }
 
-    @RequestMapping(value = "show", method = RequestMethod.GET)
-    public String showForm(Model model){
-        model.addAttribute("employee", new Employee());
-        return "employee/create";
-    }
+    //mapping(value = action, method = RequestMethd.GET)
+//    public String showForm(Model model){
+//        model.addAttribute("employee", new Employee());
+//        return "employee/filePath";
+//    }
+
+//    @RequestMapping(value = "/show", method = RequestMethod.GET)
+//    public String showForm(Model model){
+//        model.addAttribute("employee", new Employee());
+//        return "employee/create";
+//    }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String submit(@ModelAttribute("employee") Employee employee, ModelMap model) {
@@ -33,11 +40,11 @@ public class EmployeeController {
         return "employee/info";
     }
 
-    @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String submit(Model model, Employee employee){
-        model.addAttribute("id", employee.getId());
-        model.addAttribute("name", employee.getName());
-        model.addAttribute("contactNumber", employee.getContactNumber());
-        return "employee/info";
-    }
+    // map(value = action, method = RequestMethod.POST)
+//    public String submit(Employee employee, Model model){
+//        model.addAttribute(employee.getName());
+//        model.addAttribute(employee.getContactNumber());
+//        model.addAttribute(employee.getId());
+//        return "/filePath";
+//    }
 }
